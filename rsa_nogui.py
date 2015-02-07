@@ -178,7 +178,7 @@ if __name__ == "__main__":
         global files
         files = []
         for file in listdir(getcwd()):
-            if file.endswith(".bef3"):
+            if file.endswith(".rsa"):
                 files.append(file)
 
     def encode_click():
@@ -186,7 +186,7 @@ if __name__ == "__main__":
         power = P
         message = str(input("Enter message: "))
         filename = str(input("What will the file be called? "))
-        with open(getcwd() + "/" + filename + ".bef3", 'w') as writefile:
+        with open(getcwd() + "/" + filename + ".rsa", 'w') as writefile:
             writefile.write(encode_text(message, modulator, power))
         print("Done!")
 
